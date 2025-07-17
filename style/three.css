@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+.header, .nav, .main, .aside, .aside-one, .footer{
+    background-color: gray;
+    border: 4px solid tomato;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+}
+.header{
+    grid-area: header;
+}
+.nav{
+    grid-area: nav;
+}
+.main{
+    grid-area: main;
+}
+.aside{
+    grid-area: aside;
+}
+.aside-one{
+    grid-area: aside-one;
+}
+.footer{
+    grid-area: footer;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header header header header"
+    "nav    main   main   aside"
+    "nav    main   main   aside-one"
+    "footer footer footer  footer"
+    ;
+}
