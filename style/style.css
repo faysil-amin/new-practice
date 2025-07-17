@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div img {
+    height: 100%;
+    width: 100%;
+}
+
+.row > div {
+    flex: 1;
+}
+.one{
+    height: calc((100% - 5px)/2);
+}
+.two{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+.row {
+    height: 400px;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+
+}
+
+@media screen and (max-width: 576px) {
+    .row{
+        flex-direction: column;
+        height: 100%;
+    }
+    .two{
+        grid-template-columns: repeat(1,100%);
+        row-gap: 5px;
+    }
+}
